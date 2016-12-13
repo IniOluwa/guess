@@ -8,6 +8,13 @@
         <section>
             <h1>Guess the anime!</h1>
             <p> {{ question }} </p>
+            <form method="POST">
+                <p>
+                    <input type="radio" name="answer" value="Yes"> Yes <br>
+                    <input type="radio" name="answer" value="No"> No <br>
+                </p>
+                <input type="submit" name="" value="Submit">
+            </form>
             <h5>Tired of playing? <a href="{{ url_for('index') }}">Click</a> to end</h5>
         </section>
         <footer></footer>
