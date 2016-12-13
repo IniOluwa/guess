@@ -9,14 +9,16 @@
             <h1>Guess the anime!</h1>
             <p> {{ question }} </p>
             <form method="POST">
+                {{ form.hidden_tag() }}
                 <p>
-                    <input type="radio" name="answer" value="Yes"> Yes <br>
-                    <input type="radio" name="answer" value="No"> No <br>
+                    {% for option in form.answer %}
+                        {{ option }} {{ option.label }} <br>
+                    {% endfor %}
                 </p>
-                <input type="submit" name="" value="Submit">
+                {{ form.submit }}
             </form>
             <h5>Tired of playing? <a href="{{ url_for('index') }}">Click</a> to end</h5>
-        </section>
+        </section>  
         <footer></footer>
     </body>
 </html>
