@@ -7,7 +7,8 @@
         <header></header>
         <section>
             <h1>Guess the anime!</h1>
-            <h4>My Guess is => {{ guess }}</h4>
+            <p> {{ question }} </p>
+            <h5>Tired of playing? <a href="{{ url_for('index') }}">Click</a> to end</h5>
         </section>
         <footer></footer>
     </body>
